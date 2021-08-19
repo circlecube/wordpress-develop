@@ -2,6 +2,7 @@ body {
 	--wp-admin--theme--primary: #2271b1;
 	--wp-admin--theme--primary--contrast: #f6f7f7;
 	--wp-admin--theme--primary--step-10: #1a5686;
+	--wp-admin--theme--primary--step-X: #0a4b78;
 	--wp-admin--theme--notification: #d63638;
 	--wp-admin--theme--notification--contrast: #fff;
 	--wp-admin--theme--success: #00a32a;
@@ -36,6 +37,7 @@ body {
 	--wp-admin--link--color--hover: var(--wp-admin--theme--primary--step-10);
 	--wp-admin--link-delete--color: #b32d2e;
 	--wp-admin--link-delete--color--hover: #b32d2e;
+	--wp-admin--link-delete--color--disabled: #a7aaad;
 
 	--wp-admin--button: #f6f7f7;
 	--wp-admin--button--hover: #f0f0f1;
@@ -102,6 +104,14 @@ body {
 	--wp-admin--plugin-modal-banner-title--background: rgba(29, 35, 39, 0.9);
 
 	--wp-admin--site-icon--background-color: #000;
+
+	--wp-admin--nav-menu-item-handle--background--deleting: #f86368;
+	--wp-admin--nav-menu-item-handle--background--invalid: #fcf0f1;
+	--wp-admin--nav-menu-item-handle--border--hover: #8c8f94;
+	--wp-admin--nav-menu-item-handle--border--invalid: #d63638;
+	--wp-admin--nav-menu-footer--box-shadow--sticky: #ddd;
+	--wp-admin--nav-menu-item-edit--focus--box-shadow-1: #4f94d4;
+	--wp-admin--nav-menu-item-edit--focus--box-shadow-2: rgba(79, 148, 212, 0.8);
 }
 
 body.admin-color-ectoplasm {
