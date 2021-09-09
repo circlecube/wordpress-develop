@@ -1,14 +1,15 @@
 body {
 	--wp-admin--theme--primary: #2271b1;
 	--wp-admin--theme--primary--contrast: #f6f7f7;
-	--wp-admin--theme--primary--step-10: #1a5686;
-	--wp-admin--theme--primary--step-X: #0a4b78;
+	--wp-admin--theme--primary--step-10: #0a4b78;
 	--wp-admin--theme--notification: #d63638;
 	--wp-admin--theme--notification--contrast: #fff;
 	--wp-admin--theme--success: #00a32a;
 	--wp-admin--theme--info: #72aee6;
 	--wp-admin--theme--warning: #dba617;
 	--wp-admin--theme--error: var(--wp-admin--theme--notification);
+
+	--wp-admin--theme--border: #4f94d4; /* We might want a more specific name for this color, but it gets used for a lot of borders and shadows throughout the admin */
 
 	--wp-admin--shadow: 0 0 0;
 	--wp-admin--highlight: 255 255 255;
@@ -21,7 +22,12 @@ body {
 	--wp-admin--surface--border-step-1: var(--wp-admin--surface--border); /* alias */
 	--wp-admin--surface--border-step-2: #dcdcde;
 	--wp-admin--surface--border-step-3: #f0f0f1;
+	--wp-admin--surface--border-contrast: #c3c4c7;
 	--wp-admin--surface--box-shadow: rgba(0, 0, 0, 0.1);
+
+	--wp-admin--box-shadow--focus:
+		0 0 0 1px var(--wp-admin--button-primary--hover),
+		0 0 2px 1px var(--wp-admin--button-primary);
 
 	--wp-admin--heading--color: #1d2327;
 	--wp-admin--heading-secondary--color: #50575e;
@@ -41,6 +47,7 @@ body {
 
 	--wp-admin--button: #f6f7f7;
 	--wp-admin--button--hover: #f0f0f1;
+	--wp-admin--button--focus: var(--wp-admin--theme--primary);
 	--wp-admin--button--shadow: #dcdcde;
 	--wp-admin--button--border--disabled: #dcdcde;
 	--wp-admin--button-primary: var(--wp-admin--theme--primary);
@@ -59,6 +66,9 @@ body {
 
 	--wp-admin--help-tab--background: #f0f6fc;
 	--wp-admin--help-tab--border--active: var(--wp-admin--theme--info);
+
+	--wp-admin--pending--color: #b32d2e;
+	--wp-admin--pending--color--hover: #b32d2e;
 
 	--wp-admin--nav-tab--border: var(--wp-admin--surface--border-step-1);
 	--wp-admin--nav-tab--color: #50575e;
@@ -90,12 +100,18 @@ body {
 	--wp-admin--notice-error--background: #fcf0f1;
 	--wp-admin--notice-error--border: var(--wp-admin--theme--error);
 	--wp-admin--notice-error--color: var(--wp-admin--theme--error);
+	--wp-admin--notice-error--shadow: #dcdcde;
+
+	--wp-admin--action-approve--color: #007017;
+	--wp-admin--action-unpprove--color: #996800;
 
 	--wp-admin--icon--fill: #787c82;
 	--wp-admin--icon--fill--disabled: #a7aaad;
+	--wp-admin--icon--fill--inactive: var(--wp-admin--surface--border);
 	--wp-admin--icon-destructive--fill: var(--wp-admin--theme--error);
 	--wp-admin--icon-error--fill: var(--wp-admin--icon-destructive--fill);
 	--wp-admin--icon-success--fill: #68de7c;
+	--wp-admin--icon--shadow: rgba(167, 170, 173, 0.15);
 
 	--wp-admin--screen-reader-text--background: var(--wp-admin--page--background);
 	--wp-admin--screen-reader-text--color: var(--wp-admin--link--color);
@@ -111,7 +127,7 @@ body {
 	--wp-admin--slider-handle--background: var(--wp-admin--surface--background-alternate);
 	--wp-admin--slider-handle--background--active: var(--wp-admin--page--background);
 	--wp-admin--slider-handle--border: var(--wp-admin--surface--border);
-	--wp-admin--slider-handle--border--hover: #8c8f94;
+	--wp-admin--slider-handle--border--hover: var(--wp-admin--surface--border-contrast);
 	--wp-admin--slider-handle--color: #50575e;
 	--wp-admin--slider-handle--color--hover: #1d2327;
 
@@ -124,6 +140,28 @@ body {
 	--wp-admin--nav-menu-footer--box-shadow--sticky: #ddd;
 	--wp-admin--nav-menu-item-edit--focus--box-shadow-1: #4f94d4;
 	--wp-admin--nav-menu-item-edit--focus--box-shadow-2: rgba(79, 148, 212, 0.8);
+	
+	--wp-admin--install--body--box-shadow: rgba(0, 0, 0, 0.04);
+	--wp-admin--install--link--color--hover: #135e96;
+	--wp-admin--install--link--color--focus: #043959;
+	--wp-admin--install--link--color--focus--box-shadow: #4f94d4;
+	--wp-admin--install--link--color--focus--box-shadow-alt: rgba(79, 148, 212, 0.8);
+	--wp-admin--install--heading--border-color: #dcdcde;
+	--wp-admin--install--heading--color: #646970;
+	--wp-admin--install--textarea--border: #dcdcde;
+	--wp-admin--install--select--border: #dcdcde;
+	--wp-admin--install--select--color--focus: #0a4b78;
+
+	--wp-admin--login--link--color--hover: #135e96;
+	--wp-admin--login--link--color--focus: #043959;
+	--wp-admin--login--link--box-shadow-from--focus: #4f94d4;
+	--wp-admin--login--link--box-shadow-to--focus: rgba(79, 148, 212, 0.8);
+	--wp-admin--login--box-shadow: rgba(0, 0, 0, 0.1);
+	--wp-admin--login--button--border-color: #3582c4;
+	--wp-admin--login--button--box-shadow: var(--wp-admin--login-button--border-color);
+	--wp-admin--login--form--box-shadow: rgba(0, 0, 0, 0.04);
+
+	--wp-admin--pointer-content--box-shadow: rgba(0, 0, 0, 0.08);
 }
 
 body.admin-color-ectoplasm {
